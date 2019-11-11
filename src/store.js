@@ -1,28 +1,22 @@
-/*eslint no-console: ["error", { allow: ["warn", "error"] }] */
 import Vue from 'vue'
 import Vuex from 'vuex'
+
 Vue.use(Vuex)
 
 const store = new Vuex.Store({
-	state:{
-		todos:[],
-		radioTypes:[
-			{ value: "all", label: 'すべて'},
-			{ value: "doing",  label: '作業中'},
-			{ value: "done",  label: '完了'}
-		],
+	state:{		
+		todos:[],		
 		currentRadio:"all",
 	},
 	getters:{
 		computedTodos(state){
 			if(state.currentRadio === "all"){
-				return state.todos;
-			}
+				return state.todos;				
+			}			
 			return state.todos.filter(element => {
 				return element.status === state.currentRadio;
 			});
 		},
-
 	},
 	mutations:{
 		taskAdd(state, task){
