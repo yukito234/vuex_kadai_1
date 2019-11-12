@@ -7,11 +7,11 @@
 </template>
 
 <script>
-	import Definitions from '../static/definitions.js'
+	import radioTypes from '../static/definitions.js'	
 	export default {
 		computed:{
 			getRadioBtn(){
-				return Definitions.radioTypes;
+				return radioTypes;
 			},
 			radioType:{
 				get(){
