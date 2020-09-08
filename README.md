@@ -1,2 +1,4 @@
 # vuex_kadai_1
-べっちさんのvuexの課題１
+
+## 概要
+vuexの理解を深めるため、todoリストをvuexで作成した。
